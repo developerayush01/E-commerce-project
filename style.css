@@ -1,0 +1,90 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+body
+{
+    height: 100vh;
+    width: 100vw;
+}
+.top-part
+{
+    height: 80vh;
+}
+.top-part > header
+{
+    height: 70px;
+    width: 100%;
+    background-color: skyblue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+}
+section>header>ul
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.slider
+{
+    margin-top: 5%;
+    display: flex;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.slider>button
+{
+    height:50px;
+    width: 50px;
+    padding: 10px;
+    border-radius: 50px;
+    outline: seashell;
+    border: 1px solid gray;
+}
+.slider>button:hover
+{
+    cursor: pointer;
+    background-color: antiquewhite;
+}
+.carousel
+{
+    border: 1px solid blue;
+    height: 100%;
+    width: 50%;
+    background-image: url("pexels-alexmoliski-28969898.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-self: center;
+    justify-self: center;
+}
+.main
+{
+    display: flex;
+    justify-content: center;
+}
+.main-1
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1500px;
+    gap: 10px;
+    justify-content: left;
+}
+.main-1>div
+{
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+    border: 2px solid red;
+    gap: 10px;
+}
