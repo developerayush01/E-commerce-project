@@ -32,9 +32,17 @@ section>header>ul
     justify-content: space-evenly;
     list-style: none;
 }
-#catagories,#latest,#trending{
+.option-all{
+    height: 5vh;
+}
+.catagories,.latest,.trending{
+    position: relative;
     border: none;
     outline: none;
+}
+.dropdown{
+    /* position: absolute;
+    top: 0; */
 }
 .slider
 {
