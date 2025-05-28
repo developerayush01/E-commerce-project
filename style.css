@@ -32,6 +32,10 @@ section>header>ul
     justify-content: space-evenly;
     list-style: none;
 }
+#catagories,#latest,#trending{
+    border: none;
+    outline: none;
+}
 .slider
 {
     margin-top: 5%;
