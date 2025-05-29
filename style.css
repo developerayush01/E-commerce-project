@@ -46,6 +46,8 @@ body
 .option-all{
     width: 50%;
     overflow: visible;
+    position: sticky;
+    top: 0;
 }
 .catagories,.latest,.trending{
     overflow: visible;
@@ -58,11 +60,10 @@ body
     display: none;
   position: absolute;
   top: 100%;
-  border: 1px solid red;
   left: 0;
   height: fit-content;
   z-index: 1000;
-  background: white;
+  background-color: white;
   min-width: 180px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   padding: 10px 0;
@@ -70,12 +71,14 @@ body
 }
 .cata-list>li{
 list-style: none;
-border-bottom: 1px solid black;
+padding-bottom: 5%;
+background-color: white;
 }
 .cata-list>li>a{
     text-decoration: none;
-    color: black;
-    font-weight: bold;
+    color: gray;
+    background-color: white;
+    font-weight: 500;
 }
 .cat:hover .cata-list {
     display: block;
