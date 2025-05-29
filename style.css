@@ -123,20 +123,21 @@ background-color: white;
 {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .main-1
 {
     display: flex;
-    flex-wrap: wrap;
-    width: 1500px;
-    gap: 10px;
     justify-content: left;
 }
 .main-1>div
 {
-    height: 200px;
-    width: 200px;
     background-color: aqua;
     border: 2px solid red;
     gap: 10px;
+}
+.products
+{
+    width: 100%;
+    padding: 0;
 }
