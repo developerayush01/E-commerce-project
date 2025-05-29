@@ -1,101 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
+
 <body>
-    <section class="top-part">
-        <header class="px-3 d-flex">
-          <div class="logo d-flex align-items-center">
-            AB Enterprise
+  <section class="top-part">
+    <header class="px-3 d-flex justify-content-center">
+      <div class="header d-flex justify-content-center align-items-center w-75">
+        <div class="logo d-flex align-items-center">
+          AB Enterprise
+        </div>
+        <div class="ul-box d-flex justify-content-center align-items-center">
+          <ul>
+            <li>Home</li>
+            <li>Store</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="options d-flex justify-content-center align-items-center container-fluid">
+      <div class="option-all d-none d-md-flex justify-content-center gap-5 align-items-center">
+        <div class="catagories">
+          <div class="catagory-item">
+            <div class="cat fw-bold">
+              Catagories
+            </div>
+            <ul class="cata-list">
+              <li><a href="">Men's Accessories</a></li>
+              <li><a href="">Female Accessories</a></li>
+              <li><a href="">Baby Products</a></li>
+              <li><a href="">Food and Dairy</a></li>
+              <li><a href="">Clothes</a></li>
+              <li><a href="">Grocery</a></li>
+            </ul>
           </div>
-            <div class="ul-box d-flex justify-content-center align-items-center">
-              <ul>
-                  <li>Home</li>
-                  <li>Store</li>
-                  <li>About Us</li>
-                  <li>Contact Us</li>
+        </div>
+        <!--  -->
+        <div class="latest">
+          <div class="catagory-item">
+            <div class="cat fw-bold">Latest
+            </div>
+          </div>
+        </div>
+
+        <div class="Trending">
+          <div class="catagory-item">
+            <div class="cat fw-bold">Trending</div>
+              <ul class="cata-list">
+                <li><a href="">Product of Day</a></li>
+                <li><a href="">Top Selling Product</a></li>
+                <li><a href="">Flash Sale</a></li>
               </ul>
-            </div>
-        </header>
-        <div class="options d-flex justify-content-center align-items-center container">
-            <div class="option-all d-none d-md-flex justify-content-center gap-5 align-items-center">
-                <div class="catagories">
-                    <div class="catagory-item">
-    <div class="cat fw-bold">Catagories
-      <ul class="cata-list">
-      <li><a href="">Men's Accessories</a></li>
-      <li><a href="">Female Accessories</a></li>
-      <li><a href="">Baby Products</a></li>
-      <li><a href="">Food and Dairy</a></li>
-      <li><a href="">Clothes</a></li>
-      <li><a href="">Grocery</a></li>
-    </ul>
-    </div>
-    
-  </li>
-                    </div>
-                </div>
-
-
-
-
-
-                <!--  -->
-
-                <div class="latest">
-                    <div class="catagory-item">
-    <div class="cat fw-bold">Latest
-    </div>
-                    </div>
-                </div>
-
-                <div class="Trending">
-                   <div class="catagory-item">
-    <div class="cat fw-bold">Trending
-      <ul class="cata-list">
-      <li><a href="">Product of Day</a></li>
-      <li><a href="">Top Selling Product</a></li>
-      <li><a href="">Flash Sale</a></li>
-    </ul>
-    </div>
-    
-  </li>
-                    </div>
-                </div>
-                        </div>
-            </div>
-        <div class="slider">
-            <button><</button>
-        <div class="carousel" id="carousel">
+          </div>
         </div>
-        <button>></button>
+      </div>
     </div>
-    </section>
-    <!-- After banner -->
-    <section class="main border">
-        <div class="row g-5 d-flex justify-content-center align-items-center main-1">
-            <div class="col-6 col-md-2 products">
-              <div class="product-img">
-                <img src="images/a-photo-of-a-cross-section-of-the-ocean.jpeg" alt="">
-              </div>
-              <div class="product-details"></div>
+    <div class="slider">
+      <button>
+        <</button>
+          <div class="carousel" id="carousel">
+          </div>
+          <button>></button>
+    </div>
+  </section>
+  <!-- After banner -->
+  <section class="main d-flex justify-content-center border">
+    <div class="container d-flex justify-content-center">
+      <div class="row gap-3 main-1">
+        <div class="col-6 col-md-2 products">
+          <div class="product-inside">
+            <div class="product-img">
             </div>
-            <div class="col-6 col-md-2 products"></div>
-            <div class="col-6 col-md-2 products"></div>
-            <div class="col-6 col-md-2 products"></div>
-            <div class="col-6 col-md-2 products"></div>
-            <div class="col-6 col-md-2 products"></div>
-            <div class="col-6 col-md-2 products"></div>
+            <div class="product-details"></div>
+                  </div>
+          </div>
+        <div class="col-6 col-md-2 products">
+          <div class="product-inside">
+          </div>
         </div>
-    </section>
-    <!-- After Banner end -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+        <div class="col-6 col-md-2 products">
+          <div class="product-inside">
+          </div>
+        </div>
+        <div class="col-6 col-md-2 products">
+          <div class="product-inside">
+          </div>
+        </div>
+        <div class="col-6 col-md-2 products">
+          <div class="product-inside">
+          </div>
+        </div>
+        <div class="col-6 col-md-2 products">
+          <div class="product-inside">
+          </div>
+        </div>
+        <div class="col-6 col-md-2 products">
+          <div class="product-inside">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- After Banner end -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>

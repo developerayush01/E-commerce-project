@@ -1,63 +1,65 @@
-*
-{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body
-{
-    height: 100vh;
-    width: 100vw;
+body {
+  height: 100vh;
+  width: 100vw;
 }
-.top-part
-{
-    height: 80vh;
+.top-part {
+  height: 80vh;
 }
-.top-part > header
-{
-    height: 70px;
-    width: 100%;
-    background-color: skyblue;
-    display: flex;
-    align-items: center;
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
+ header {
+  height: 70px;
+  width: 100%;
+  background-color: skyblue;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
 }
-.logo{
-    height: 100%;
-    width: 50%;
+.logo {
+  height: 100%;
+  width: 50%;
 }
 .ul-box {
-    height: 100%;
-    width: 50%;
-    display: flex;
-    align-items: center;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
 }
 .ul-box ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 100%;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.option-all{
-    width: 50%;
-    overflow: visible;
-    position: sticky;
-    top: 0;
+.options {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  background: rgb(235, 209, 209);
+  overflow: visible;
 }
-.catagories,.latest,.trending{
-    overflow: visible;
+.option-all {
+  width: 50%;
+  overflow: visible;
+}
+.catagories,
+.latest,
+.trending {
+  overflow: visible;
 }
 .catagory-item {
-    position: relative;
+  position: relative;
+  overflow: visible;
 }
 
 .cata-list {
-    display: none;
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -65,79 +67,68 @@ body
   z-index: 1000;
   background-color: white;
   min-width: 180px;
+  margin-bottom: 0;
+  padding-bottom: 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  padding: 10px 0;
   border-radius: 4px;
 }
-.cata-list>li{
-list-style: none;
-padding-bottom: 5%;
-background-color: white;
+.cata-list > li {
+  list-style: none;
+  background-color: white;
 }
-.cata-list>li>a{
-    text-decoration: none;
-    color: gray;
-    background-color: white;
-    font-weight: 500;
+.cata-list > li > a {
+  text-decoration: none;
+  color: gray;
+  background-color: white;
+  font-weight: 500;
 }
-.cat:hover .cata-list {
-    display: block;
+.catagory-item:hover .cata-list {
+  display: block;
 }
 
-.slider
-{
-    margin-top: 5%;
-    display: flex;
-    height: 60%;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+.slider {
+  margin-top: 5%;
+  display: flex;
+  position: relative;
+  /* z-index: 999; */
+  height: 60%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
-.slider>button
-{
-    height:50px;
-    width: 50px;
-    padding: 10px;
-    border-radius: 50px;
-    outline: seashell;
-    border: 1px solid gray;
+.slider > button {
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  border-radius: 50px;
+  outline: seashell;
+  border: 1px solid gray;
 }
-.slider>button:hover
-{
-    cursor: pointer;
-    background-color: antiquewhite;
+.slider > button:hover {
+  cursor: pointer;
+  background-color: antiquewhite;
 }
-.carousel
-{
-    border: 1px solid blue;
+.carousel {
+  border: 1px solid blue;
+  height: 100%;
+  width: 50%;
+  background-image: url("pexels-alexmoliski-28969898.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-self: center;
+  justify-self: center;
+}
+.main{
     height: 100%;
-    width: 50%;
-    background-image: url("pexels-alexmoliski-28969898.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-self: center;
-    justify-self: center;
-}
-.main
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.main-1
-{
-    display: flex;
-    justify-content: left;
-}
-.main-1>div
-{
-    background-color: aqua;
-    border: 2px solid red;
-    gap: 10px;
-}
-.products
-{
     width: 100%;
-    padding: 0;
+}
+.main-1{
+    width: 70%;
+}
+.products {
+    border: 1px solid black;
+  height: 200px;
+  width: 200px;
+  background-color: aliceblue;
 }
