@@ -124,10 +124,23 @@ body {
 .main{
     overflow: hidden;
 }
-.container-fluid{
+.main1{
   width: 50%;
 }
+.catagories-section{
+  width: 100%;
+}
+.items{
+  width: 100%;
+}
+.items-holder{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .product-head{
+  width: 50%;
   color: black;
   font-size: large;
 }
@@ -158,3 +171,13 @@ object-fit: contain;
 .columns{
   height: 250px;
 }
+
+/*  */
+
+.product-row{
+  width: 100%;
+}
+.card{
+  width: 200px;
+}
+/*  */
