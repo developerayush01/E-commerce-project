@@ -127,6 +127,10 @@ body {
 .container-fluid{
   width: 50%;
 }
+.product-head{
+  color: black;
+  font-size: large;
+}
 .products
 {
   border: 1px solid black;
@@ -140,6 +144,7 @@ body {
 }
 .product-content{
   height: 40%;
+  color: gray;font-weight: 600;
 }
 .product-inside:hover{
   box-shadow: 0px 10px 10px black;
