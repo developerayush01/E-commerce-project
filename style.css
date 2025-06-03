@@ -121,18 +121,17 @@ body {
   align-self: center;
   justify-self: center;
 }
-.main{
-    overflow: hidden;
-    padding: 0 10em 0 10em;
-}
 .main1{
   /* width: 50%; */
 }
 .catagories-section{
-  width: 100%;
+  /* width: 100%; */
 }
 .items{
   width: 100%;
+}
+.main{
+  padding: 0 5% 0 5%;
 }
 .items-holder{
   width: 100%;
@@ -176,9 +175,9 @@ object-fit: contain;
 /*  */
 
 .product-row{
-  width: 100%;
+  /* width: 100%; */
 }
 .card{
-  width: 200px;
+  /* width: 200px; */
 }
 /*  */
