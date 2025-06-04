@@ -10,9 +10,14 @@
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous"
     />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="media.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   </head>
 
   <body>
@@ -69,11 +74,22 @@
             </div>
           </div>
         </div>
-          <div class="slider">
-            <button><</button>
-            <div class="carousel" id="carousel"></div>
-            <button>></button>
-          </div>
+          <!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">
+      <img src="images/34006764_8125395.png" class="img-fluid" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="images/375800709_be88a25d-bfd4-4be1-b3b4-2757192af14c.png" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="images/13402987_5207062.png" alt="">
+    </div>
+  </div>
+</div>
               </section>
               <!-- After banner -->
                <div class="container-fluid">
@@ -86,7 +102,7 @@
                 <div class="col-6 col-md-4 columns">
                   <div class="product-inside h-100 border">
                     <div class="product-image">
-                      <img src="images/download.jpg" alt="" />
+                      <img src="images/elegant-watch-with-silver-golden-chain-isolated.png" alt="" />
                     </div>
                     <div
                       class="product-content d-flex justify-content-center align-items-center"
@@ -100,7 +116,7 @@
                 <div class="col-6 col-md-4 columns">
                   <div class="product-inside h-100 border">
                     <div class="product-image">
-                      <img src="images/download (1).jpg" alt="" />
+                      <img src="images/luxury-woman-handbag.jpg" alt="" />
                     </div>
                     <div
                       class="product-content d-flex justify-content-center align-items-center"
@@ -112,7 +128,7 @@
                 <div class="col-6 col-md-4 columns">
                   <div class="product-inside h-100 border">
                     <div class="product-image">
-                      <img src="images/download (2).jpg" alt="" />
+                      <img src="images/9316.jpg" alt="" />
                     </div>
                     <div
                       class="product-content d-flex justify-content-center align-items-center"
@@ -182,16 +198,54 @@
           
               </div>
         </div>
+        <hr>
     <!-- Items section end -->
      <footer>
-      <div class="row container">
-        <ul>
-          <li>Home</li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+      <div class="container">
+        <div class="row container">
+          <div class="company-info col-12 col-md-3">
+  <ul class="list-unstyled">
+    <li class="fw-bold"><p><u>Company Info</u></p></li>
+    <li><a href="#" class="text-decoration-none text-body">About Us</a></li>
+    <li><a href="#" class="text-decoration-none text-body">Careers</a></li>
+    <li><a href="#" class="text-decoration-none text-body">Blog</a></li>
+    <li><a href="#" class="text-decoration-none text-body">Affiliate Program</a></li>
+  </ul>
+</div>
+
+<div class="customer-service col-12 col-md-3">
+  <ul class="list-unstyled">
+    <li class="fw-bold"><p><u>Customer Service</u></p></li>
+    <li><a href="#" class="text-decoration-none text-body">Contact Us</a></li>
+    <li><a href="#" class="text-decoration-none text-body">FAQs</a></li>
+    <li><a href="#" class="text-decoration-none text-body">Shipping & Delivery</a></li>
+    <li><a href="#" class="text-decoration-none text-body">Returns & Refunds</a></li>
+  </ul>
+</div>
+
+<div class="policies col-12 col-md-3">
+  <ul class="list-unstyled">
+    <li class="fw-bold"><p><u>Policies</u></p></li>
+    <li><a href="#" class="text-decoration-none text-body">Privacy Policy</a></li>
+    <li><a href="#" class="text-decoration-none text-body">Terms & Conditions</a></li>
+    <li><a href="#" class="text-decoration-none text-body">Return Policy</a></li>
+    <li><a href="#" class="text-decoration-none text-body">Payment Security</a></li>
+  </ul>
+</div>
+
+<div class="connect col-12 col-md-3">
+  <ul class="list-unstyled">
+    <li class="fw-bold"><p><u>Connect With Us</u></p></li>
+    <li><a href="#" class="text-decoration-none text-body"><i class="fab fa-facebook me-2"></i>Facebook</a></li>
+    <li><a href="#" class="text-decoration-none text-body"><i class="fab fa-instagram me-2"></i>Instagram</a></li>
+    <li><a href="#" class="text-decoration-none text-body"><i class="fab fa-youtube me-2"></i>YouTube</a></li>
+    <li><a href="#" class="text-decoration-none text-body"><i class="fab fa-tiktok me-2"></i>TikTok</a></li>
+  </ul>
+</div>
+
+
+
+        </div>
       </div>
      </footer>
     <script
@@ -200,6 +254,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="node.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="slider.js"></script>
     <!-- <script src="script.js"></script> -->
   </body>
 </html>
