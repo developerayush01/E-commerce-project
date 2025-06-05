@@ -31,23 +31,12 @@ var ForYou = [
 
   { item: "T-shirt", category: "Clothes", price: 1294, rating: 4.1, stock: "In Stock", image: "t-shirt.jpg" },
   { item: "Jeans", category: "Clothes", price: 2605, rating: 3.7, stock: "In Stock", image: "jeans.jpg" },
-  { item: "Jacket", category: "Clothes", price: 1815, rating: 4.3, stock: "In Stock", image: "jacket.jpg" },
-  { item: "Sweater", category: "Clothes", price: 2350, rating: 4.7, stock: "In Stock", image: "sweater.jpg" },
-  { item: "Kurta", category: "Clothes", price: 1134, rating: 3.7, stock: "In Stock", image: "kurta.jpg" },
-  { item: "Shorts", category: "Clothes", price: 2547, rating: 4.1, stock: "Out of Stock", image: "shorts.jpg" },
-  { item: "Socks (3 pairs)", category: "Clothes", price: 1140, rating: 4.0, stock: "In Stock", image: "socks-3-pairs.jpg" },
-
-  { item: "Rice Bag 5kg", category: "Grocery", price: 1173, rating: 4.4, stock: "Out of Stock", image: "rice-bag-5kg.jpg" },
-  { item: "Cooking Oil 1L", category: "Grocery", price: 2704, rating: 3.7, stock: "Out of Stock", image: "cooking-oil-1l.jpg" },
-  { item: "Sugar 1kg", category: "Grocery", price: 2129, rating: 4.5, stock: "In Stock", image: "sugar-1kg.jpg" },
-  { item: "Salt 1kg", category: "Grocery", price: 2468, rating: 3.9, stock: "In Stock", image: "salt-1kg.jpg" },
-  { item: "Wheat Flour 5kg", category: "Grocery", price: 1400, rating: 4.4, stock: "Out of Stock", image: "wheat-flour-5kg.jpg" },
   { item: "Tea Leaves 500g", category: "Grocery", price: 2952, rating: 3.7, stock: "In Stock", image: "tea-leaves-500g.jpg" }
 ];
 
 
 
-ForYou.forEach(catagory=>{
+ForYou.forEach(products=>{
 let foryou=document.getElementById("foryou");
 
 foryou.innerHTML+=
@@ -56,9 +45,11 @@ foryou.innerHTML+=
           <div class="product-image">
             <img src="images/download.jpg" alt="" />
           </div>
-          <div class="product-content d-flex justify-content-center align-items-center">
-            <div class="d-flex justify-content-center align-items-center">
-            ${catagory.item}
+          <div class="product-content d-flex justify-content-start align-items-center">
+            <div>
+            <div class="product-name text-black fw-semibold">${products.item}</div>
+            <div class="product-name text-black fw-semibold">Rs.${products.price}</div>
+            <div class="text-black fw-semibold">Rating:${products.rating}</div>
             </div>
           </div>
         </div>
