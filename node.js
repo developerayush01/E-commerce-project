@@ -41,17 +41,15 @@ let foryou=document.getElementById("foryou");
 
 foryou.innerHTML+=
 `      <div class="col-6 col-sm-3 col-md-2 columns">
-        <div class="product-inside h-100 border">
-          <div class="product-image">
-            <img src="images/download.jpg" alt="" />
-          </div>
-          <div class="product-content d-flex justify-content-start align-items-center">
-            <div>
-            <div class="product-name text-black fw-semibold">${products.item}</div>
-            <div class="product-name text-black fw-semibold">Rs.${products.price}</div>
-            <div class="text-black fw-semibold">Rating:${products.rating}</div>
-            </div>
-          </div>
-        </div>
-      </div>`
+  <div class="product-inside shadow-hover border rounded-3 overflow-hidden">
+    <div class="product-image">
+      <img src="images/download.jpg" alt="Product Image" />
+    </div>
+    <div class="product-content d-flex flex-column justify-content-center align-items-start gap-1 p-2">
+      <div class="product-name text-dark fw-semibold">${products.item}</div>
+      <div class="product-price text-danger fw-bold">Rs. ${products.price}</div>
+      <div class="product-rating text-warning">⭐ ${products.rating}</div>
+    </div>
+  </div>
+</div>`
 });
