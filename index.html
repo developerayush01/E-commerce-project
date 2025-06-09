@@ -15,6 +15,7 @@
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="media.css" />
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,21 +28,21 @@
 
   <body>
     <section class="top-part">
-      <header class="px-3 d-flex justify-content-center">
-      <div class="header d-flex justify-content-center align-items-center w-75">
-        <div class="logo d-flex align-items-center">
-          AB Enterprise
-        </div>
-        <div class="ul-box d-flex justify-content-center align-items-center">
-          <ul>
-            <li>Home</li>
-            <li>Store</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
-          </ul>
-        </div>
-      </div>
-    </header>
+      <header class="header">
+  <div class="logo">AB Enterprise</div>
+  <div class="hamburger" id="hamburger">&#9776;</div>
+  <nav class="nav-menu" id="navMenu">
+    <ul>
+      <li>Home</li>
+      <li>Store</li>
+      <li>About Us</li>
+      <li>Contact Us</li>
+    </ul>
+  </nav>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
         <div
           class="options d-flex justify-content-center align-items-center container-fluid"
         >
@@ -105,18 +106,20 @@
             <div class="catagories-wrap d-flex justify-content-center">
               <div class="row g-3 main1 pb-5">
                 <div class="col-6 col-md-4 columns">
-                  <div class="product-inside h-100 border">
-                    <div class="product-image">
-                      <img src="images/elegant-watch-with-silver-golden-chain-isolated.png" alt="" />
-                    </div>
-                    <div
-                      class="product-content d-flex justify-content-center align-items-center"
-                    >
-                      <div class="d-flex justify-content-center align-items-center">
-                        Men's Accessories
+                  <a href="catagory-page.html" class="text-decoration-none">
+                    <div class="product-inside h-100 border">
+                      <div class="product-image">
+                        <img src="images/elegant-watch-with-silver-golden-chain-isolated.png" alt="" />
+                      </div>
+                      <div
+                        class="product-content d-flex justify-content-center align-items-center"
+                      >
+                        <div class="d-flex justify-content-center align-items-center">
+                          Men's Accessories
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
                 <div class="col-6 col-md-4 columns">
                   <div class="product-inside h-100 border">
@@ -258,6 +261,6 @@
     <script src="node.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="slider.js"></script>
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
   </body>
 </html>

@@ -12,33 +12,6 @@ body {
 .top-part {
   height: 80vh;
 }
- header {
-  height: 70px;
-  width: 100%;
-  background-color: skyblue;
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-}
-.logo {
-  height: 100%;
-  width: 50%;
-}
-.ul-box {
-  height: 100%;
-  width: 50%;
-  display: flex;
-  align-items: center;
-}
-.ul-box ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 100%;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 .options {
   position: sticky;
   top: 0;
