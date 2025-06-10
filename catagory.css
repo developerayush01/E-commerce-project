@@ -34,3 +34,7 @@
 .price>div>input{
     width: 100%;
 }
+.star>span{
+    font-size: 24px;
+  color: gold;
+}
