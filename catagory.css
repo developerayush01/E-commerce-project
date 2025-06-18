@@ -38,3 +38,77 @@
     font-size: 24px;
   color: gold;
 }
+
+/* Base structure */
+.columns {
+  height: 220px;
+  padding: 5px;
+}
+
+/* Container with hover magic */
+.product-inside {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 5%;
+  justify-content: left;
+  align-items: center;
+  background-color: #fff;
+  transition: all 0.4s ease-in-out;
+  border-radius: 10px;
+}
+
+/* Image section */
+.product-image {
+  height: 60%;
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product-inside:hover .product-image img {
+  transform: scale(1.05);
+}
+
+/* Content section */
+.product-content {
+  height: 40%;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Text styling */
+.product-name {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+.product-price {
+  font-size: 1.1rem;
+}
+
+.product-rating {
+  font-size: 0.9rem;
+}
+
+/* Sexy box shadow on hover */
+.shadow-hover:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+.next{
+  cursor: pointer;
+}
