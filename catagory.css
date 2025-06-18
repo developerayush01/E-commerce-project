@@ -109,6 +109,9 @@
   transform: translateY(-5px);
   cursor: pointer;
 }
-.next{
+.next, .previous{
   cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }

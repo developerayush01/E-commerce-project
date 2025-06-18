@@ -34,36 +34,78 @@ var ForYou = [
   { item: "Tea Leaves 500g", category: "Grocery", price: 2952, rating: 3.7, stock: "In Stock", image: "tea-leaves-500g.jpg" }
 ];
 
+// {/* <div class="col-12 columns">
+//   <div class="product-inside shadow-hover border rounded-3 overflow-hidden">
+//     <div class="product-image">
+//       <img src="images/download.jpg" alt="Product Image" />
+//     </div>
+//     <div class="product-content d-flex flex-column justify-content-center align-items-start gap-1 p-2">
+//       <div class="product-name text-dark fw-semibold">${products.item}</div>
+//       <div class="product-price text-danger fw-bold">Rs. ${products.price}</div>
+//       <div class="product-rating text-warning">⭐ ${products.rating}</div>
+//     </div>
+//   </div>
+// </div>
+//     ` */}
 
+let pagelist=document.getElementById("main");
 let page=1;
-let main=document.getElementById("main");
+let itemsperpage=10;
+pagelist.innerHTML="";
+let start=(page-1)*10;
+let end=start+itemsperpage;
+let currentpage=page;
 
-main.innerHTML="";
+let product=ForYou.slice(start,end);
 
-const start=(page-1)*10;
-const end=start+10;
-let paginatedItems=ForYou.slice(start,end);
- paginatedItems.forEach(products => {
-     main.innerHTML+= `
-      <div class="col-12 columns">
-  <div class="product-inside shadow-hover border rounded-3 overflow-hidden">
-    <div class="product-image">
-      <img src="images/download.jpg" alt="Product Image" />
-    </div>
-    <div class="product-content d-flex flex-column justify-content-center align-items-start gap-1 p-2">
-      <div class="product-name text-dark fw-semibold">${products.item}</div>
-      <div class="product-price text-danger fw-bold">Rs. ${products.price}</div>
-      <div class="product-rating text-warning">⭐ ${products.rating}</div>
-    </div>
-  </div>
-</div>
-    `});
+product.forEach(items=>{
+pagelist.innerHTML+=
+`<div class="col-12 columns">
+<div class="product-inside shadow-hover border rounded-3 overflow-hidden">
+     <div class="product-image">
+       <img src="images/download.jpg" alt="Product Image" />
+     </div>
+     <div class="product-content d-flex flex-column justify-content-center align-items-start gap-1 p-2">
+       <div class="product-name text-dark fw-semibold">${items.item}</div>
+       <div class="product-price text-danger fw-bold">Rs. ${items.price}</div>
+       <div class="product-rating text-warning">⭐ ${items.rating}</div>
+     </div>
+   </div>
+ </div>
+`
+});
 
-    let next=document.querySelector(".next");
-    next.addEventListener("click",()=>{
-      let start=0;
-      let end=9;
-      let productperpage=ForYou.splice(start,end);
-      start=start+10;
-      end=end+10;
-    })
+document.querySelector(".next").addEventListener("click",()=>{
+
+  let totalpage=Math.ceil(ForYou.length/10);
+  if(page>=totalpage)
+    {
+      document.querySelector(".next").disabled=true;
+      document.querySelector(".next").style.color="grey";
+      return;
+    }
+    page++;
+    let pagelist=document.getElementById("main");
+      pagelist.innerHTML="";
+      let itemsperpage=10;
+let start=(page-1)*10;
+let end=start+itemsperpage;
+
+let product=ForYou.slice(start,end);
+product.forEach(items=>{
+pagelist.innerHTML+=
+`<div class="col-12 columns">
+<div class="product-inside shadow-hover border rounded-3 overflow-hidden">
+     <div class="product-image">
+       <img src="images/download.jpg" alt="Product Image" />
+     </div>
+     <div class="product-content d-flex flex-column justify-content-center align-items-start gap-1 p-2">
+       <div class="product-name text-dark fw-semibold">${items.item}</div>
+       <div class="product-price text-danger fw-bold">Rs. ${items.price}</div>
+       <div class="product-rating text-warning">⭐ ${items.rating}</div>
+     </div>
+   </div>
+ </div>
+`
+});
+})
