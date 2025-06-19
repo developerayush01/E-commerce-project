@@ -61,7 +61,7 @@ let product=ForYou.slice(start,end);
 product.forEach(items=>{
 pagelist.innerHTML+=
 `<div class="col-12 columns">
-<div class="product-inside shadow-hover border rounded-3 overflow-hidden">
+<div class="product-inside d-flex flex-column flex-md-row shadow-hover border rounded-3 overflow-hidden">
      <div class="product-image">
        <img src="images/download.jpg" alt="Product Image" />
      </div>
@@ -95,7 +95,7 @@ let product=ForYou.slice(start,end);
 product.forEach(items=>{
 pagelist.innerHTML+=
 `<div class="col-12 columns">
-<div class="product-inside shadow-hover border rounded-3 overflow-hidden">
+<div class="product-inside d-flex shadow-hover border rounded-3 overflow-hidden">
      <div class="product-image">
        <img src="images/download.jpg" alt="Product Image" />
      </div>
