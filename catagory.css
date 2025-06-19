@@ -21,9 +21,12 @@
 }
 .catlist{
     height: 100%;
+    display: flex;
+    align-items: center;
 }
 .result1{
     border: 1px solid red;
+    /* width: 100%; */
 }
 .price{
     width: 100%;
@@ -41,7 +44,7 @@
 
 /* Base structure */
 .columns {
-  height: 220px;
+  align-items: center;
   padding: 5px;
 }
 
@@ -49,7 +52,7 @@
 .product-inside {
   padding: 10px;
   height: 100%;
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   gap: 5%;
   justify-content: left;
