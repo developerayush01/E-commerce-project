@@ -34,20 +34,6 @@ var ForYou = [
   { item: "Tea Leaves 500g", category: "Grocery", price: 2952, rating: 3.7, stock: "In Stock", image: "tea-leaves-500g.jpg" }
 ];
 
-// {/* <div class="col-12 columns">
-//   <div class="product-inside shadow-hover border rounded-3 overflow-hidden">
-//     <div class="product-image">
-//       <img src="images/download.jpg" alt="Product Image" />
-//     </div>
-//     <div class="product-content d-flex flex-column justify-content-center align-items-start gap-1 p-2">
-//       <div class="product-name text-dark fw-semibold">${products.item}</div>
-//       <div class="product-price text-danger fw-bold">Rs. ${products.price}</div>
-//       <div class="product-rating text-warning">⭐ ${products.rating}</div>
-//     </div>
-//   </div>
-// </div>
-//     ` */}
-
 let pagelist=document.getElementById("main");
 let page=1;
 let itemsperpage=10;
@@ -59,20 +45,20 @@ let currentpage=page;
 let product=ForYou.slice(start,end);
 
 product.forEach(items=>{
-pagelist.innerHTML+=
-`<div class="col-12 columns">
-<div class="product-inside d-flex flex-column flex-md-row shadow-hover border rounded-3 overflow-hidden">
-     <div class="product-image">
-       <img src="images/download.jpg" alt="Product Image" />
-     </div>
-     <div class="product-content d-flex flex-column justify-content-center align-items-start gap-1 p-2">
-       <div class="product-name text-dark fw-semibold">${items.item}</div>
-       <div class="product-price text-danger fw-bold">Rs. ${items.price}</div>
-       <div class="product-rating text-warning">⭐ ${items.rating}</div>
-     </div>
-   </div>
- </div>
-`
+pagelist.innerHTML += `
+  <div class="col-6 col-md-4 col-lg-3 mb-3">
+    <div class="product-inside d-flex flex-column shadow-hover border rounded-3 overflow-hidden h-100">
+      <div class="product-image">
+        <img src="images/${items.image}" class="img-fluid" alt="${items.item}" />
+      </div>
+      <div class="product-content d-flex flex-column justify-content-center align-items-start gap-1 p-2">
+        <div class="product-name text-dark fw-semibold">${items.item}</div>
+        <div class="product-price text-danger fw-bold">Rs. ${items.price}</div>
+        <div class="product-rating text-warning">⭐ ${items.rating}</div>
+      </div>
+    </div>
+  </div>
+`;
 });
 
 document.querySelector(".next").addEventListener("click",()=>{
@@ -93,19 +79,55 @@ let end=start+itemsperpage;
 
 let product=ForYou.slice(start,end);
 product.forEach(items=>{
-pagelist.innerHTML+=
-`<div class="col-12 columns">
-<div class="product-inside d-flex shadow-hover border rounded-3 overflow-hidden">
-     <div class="product-image">
-       <img src="images/download.jpg" alt="Product Image" />
-     </div>
-     <div class="product-content d-flex flex-column justify-content-center align-items-start gap-1 p-2">
-       <div class="product-name text-dark fw-semibold">${items.item}</div>
-       <div class="product-price text-danger fw-bold">Rs. ${items.price}</div>
-       <div class="product-rating text-warning">⭐ ${items.rating}</div>
-     </div>
-   </div>
- </div>
-`
+pagelist.innerHTML += `
+  <div class="col-6 col-md-4 col-lg-3 mb-3">
+    <div class="product-inside d-flex flex-column shadow-hover border rounded-3 overflow-hidden h-100">
+      <div class="product-image">
+        <img src="images/${items.image}" class="img-fluid" alt="${items.item}" />
+      </div>
+      <div class="product-content d-flex flex-column justify-content-center align-items-start gap-1 p-2">
+        <div class="product-name text-dark fw-semibold">${items.item}</div>
+        <div class="product-price text-danger fw-bold">Rs. ${items.price}</div>
+        <div class="product-rating text-warning">⭐ ${items.rating}</div>
+      </div>
+    </div>
+  </div>
+`;
 });
 })
+
+document.querySelector(".previous").addEventListener("click", () => {
+  if (page <= 1) {
+    document.querySelector(".previous").disabled = true;
+    document.querySelector(".previous").style.color = "grey";
+    return;
+  }
+
+  page--;
+  let start = (page - 1) * itemsperpage;
+  let end = start + itemsperpage;
+  let product = ForYou.slice(start, end);
+
+  pagelist.innerHTML = "";
+
+  product.forEach(items => {
+    pagelist.innerHTML += `
+  <div class="col-6 col-md-4 col-lg-3 mb-3">
+    <div class="product-inside d-flex flex-column shadow-hover border rounded-3 overflow-hidden h-100">
+      <div class="product-image">
+        <img src="images/${items.image}" class="img-fluid" alt="${items.item}" />
+      </div>
+      <div class="product-content d-flex flex-column justify-content-center align-items-start gap-1 p-2">
+        <div class="product-name text-dark fw-semibold">${items.item}</div>
+        <div class="product-price text-danger fw-bold">Rs. ${items.price}</div>
+        <div class="product-rating text-warning">⭐ ${items.rating}</div>
+      </div>
+    </div>
+  </div>
+`;
+  });
+
+  // Re-enable Next button just in case
+  document.querySelector(".next").disabled = false;
+  document.querySelector(".next").style.color = "black";
+});

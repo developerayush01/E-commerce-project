@@ -1,5 +1,11 @@
+.sort{
+  width: 30%;
+}
 .catlist{
     border: 1px solid black;
+}
+.sorting{
+  width: 40%;
 }
 .btn {
     display: inline-block;
@@ -26,7 +32,6 @@
 }
 .result1{
     border: 1px solid red;
-    width: 40%;
 }
 .price{
     width: 100%;

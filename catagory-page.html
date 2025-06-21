@@ -95,11 +95,11 @@
       </div>
       <div class="col-12 col-md-9 result1">
         <div class="row">
-          <div class="col-12 d-flex justify-content-around">
-            <div class="result">Showing All Results</div>
-            <div class="sort">
+          <div class="col-12 d-flex justify-content-lg-evenly justify-content-between">
+            <div class="result d-none d-md-block">Showing All Results</div>
+            <div class="sort d-flex">
               <span>Sort by:</span>
-              <span>
+              <span class="sorting">
                 <select name="sort" id="sort">
                   <option value="Latest">Latest</option>
                   <option value="Price-h">Price Highest to Lowest</option>
@@ -108,7 +108,7 @@
                   <option value="z-a">Z to A order</option>
                 </select>
               </span>
-              <span class="button-group">
+              <span class="button-group d-none d-md-block">
                 <span>
                   <button class="btn p-0 mr-1 btn1" onclick="changeItemsPerRow(1, this)">
                                       <i class="fa fa-th-list" aria-hidden="true"></i>
@@ -128,7 +128,7 @@
             </div>
           </div>
           <div class="col-12 product">
-             <div class="row main flex-column flex-md-row" id="main">
+             <div class="row main" id="main">
               
              </div>
              <div class="d-flex justify-content-between gap-2">
