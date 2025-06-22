@@ -46,8 +46,8 @@ let product=ForYou.slice(start,end);
 
 product.forEach(items=>{
 pagelist.innerHTML += `
-  <div class="col-6 col-md-4 col-lg-3 mb-3">
-    <div class="product-inside d-flex flex-column shadow-hover border rounded-3 overflow-hidden h-100">
+  <div class="col-6 col-md-12 mb-3 main-product">
+    <div class="product-inside d-flex flex-column flex-md-row shadow-hover border rounded-3 overflow-hidden h-100">
       <div class="product-image">
         <img src="images/${items.image}" class="img-fluid" alt="${items.item}" />
       </div>
@@ -80,7 +80,7 @@ let end=start+itemsperpage;
 let product=ForYou.slice(start,end);
 product.forEach(items=>{
 pagelist.innerHTML += `
-  <div class="col-6 col-md-4 col-lg-3 mb-3">
+  <div class="col-6 col-md-12 mb-3">
     <div class="product-inside d-flex flex-column shadow-hover border rounded-3 overflow-hidden h-100">
       <div class="product-image">
         <img src="images/${items.image}" class="img-fluid" alt="${items.item}" />
@@ -131,3 +131,11 @@ document.querySelector(".previous").addEventListener("click", () => {
   document.querySelector(".next").disabled = false;
   document.querySelector(".next").style.color = "black";
 });
+
+// For Product
+
+let main_product=document.querySelector(".main-product");
+
+document.querySelector(".btn1").addEventListener("click",()=>{
+  
+})
