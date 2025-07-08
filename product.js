@@ -132,10 +132,17 @@ document.querySelector(".previous").addEventListener("click", () => {
   document.querySelector(".next").style.color = "black";
 });
 
+document.querySelector(".previous").addEventListener("click",()=>{
+    if (page <= 1) {
+    document.querySelector(".previous").disabled = true;
+    document.querySelector(".previous").style.color = "grey";
+    return;
+  }
+})
 // For Product
 
 let main_product=document.querySelector(".main-product");
 
 document.querySelector(".btn1").addEventListener("click",()=>{
-  
+
 })
