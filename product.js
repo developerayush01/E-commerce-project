@@ -34,115 +34,77 @@ var ForYou = [
   { item: "Tea Leaves 500g", category: "Grocery", price: 2952, rating: 3.7, stock: "In Stock", image: "tea-leaves-500g.jpg" }
 ];
 
-let pagelist=document.getElementById("main");
-let page=1;
-let itemsperpage=10;
-pagelist.innerHTML="";
-let start=(page-1)*10;
-let end=start+itemsperpage;
-let currentpage=page;
+ let pagelist = document.getElementById("main");
+  let page = 1;
+  let itemsperpage = 10;
+  let columnClass = "col-md-12"; // default layout class
 
-let product=ForYou.slice(start,end);
+  function renderProducts() {
+    let start = (page - 1) * itemsperpage;
+    let end = start + itemsperpage;
+    let product = ForYou.slice(start, end);
 
-product.forEach(items=>{
-pagelist.innerHTML += `
-  <div class="col-6 col-md-12 mb-3 main-product">
-    <div class="product-inside d-flex flex-column flex-md-row shadow-hover border rounded-3 overflow-hidden h-100">
-      <div class="product-image">
-        <img src="images/${items.image}" class="img-fluid" alt="${items.item}" />
-      </div>
-      <div class="product-content d-flex flex-column justify-content-center align-items-start gap-1 p-2">
-        <div class="product-name text-dark fw-semibold">${items.item}</div>
-        <div class="product-price text-danger fw-bold">Rs. ${items.price}</div>
-        <div class="product-rating text-warning">⭐ ${items.rating}</div>
-      </div>
-    </div>
-  </div>
-`;
-});
+    pagelist.innerHTML = "";
 
-document.querySelector(".next").addEventListener("click",()=>{
+    product.forEach(items => {
+      pagelist.innerHTML += `
+        <div class="col-6 ${columnClass} mb-3 main-product">
+          <div class="product-inside d-flex flex-column flex-md-row shadow-hover border rounded-3 overflow-hidden h-100">
+            <div class="product-image">
+              <img src="images/${items.image}" class="img-fluid" alt="${items.item}" />
+            </div>
+            <div class="product-content d-flex flex-column justify-content-center align-items-start gap-1 p-2">
+              <div class="product-name text-dark fw-semibold">${items.item}</div>
+              <div class="product-price text-danger fw-bold">Rs. ${items.price}</div>
+              <div class="product-rating text-warning">⭐ ${items.rating}</div>
+            </div>
+          </div>
+        </div>
+      `;
+    });
 
-  let totalpage=Math.ceil(ForYou.length/10);
-  if(page>=totalpage)
-    {
-      document.querySelector(".next").disabled=true;
-      document.querySelector(".next").style.color="grey";
-      return;
-    }
-    page++;
-    let pagelist=document.getElementById("main");
-      pagelist.innerHTML="";
-      let itemsperpage=10;
-let start=(page-1)*10;
-let end=start+itemsperpage;
-
-let product=ForYou.slice(start,end);
-product.forEach(items=>{
-pagelist.innerHTML += `
-  <div class="col-6 col-md-12 mb-3">
-    <div class="product-inside d-flex flex-column shadow-hover border rounded-3 overflow-hidden h-100">
-      <div class="product-image">
-        <img src="images/${items.image}" class="img-fluid" alt="${items.item}" />
-      </div>
-      <div class="product-content d-flex flex-column justify-content-center align-items-start gap-1 p-2">
-        <div class="product-name text-dark fw-semibold">${items.item}</div>
-        <div class="product-price text-danger fw-bold">Rs. ${items.price}</div>
-        <div class="product-rating text-warning">⭐ ${items.rating}</div>
-      </div>
-    </div>
-  </div>
-`;
-});
-})
-
-document.querySelector(".previous").addEventListener("click", () => {
-  if (page <= 1) {
-    document.querySelector(".previous").disabled = true;
-    document.querySelector(".previous").style.color = "grey";
-    return;
+    updatePaginationButtons();
   }
 
-  page--;
-  let start = (page - 1) * itemsperpage;
-  let end = start + itemsperpage;
-  let product = ForYou.slice(start, end);
+  function updatePaginationButtons() {
+    const totalpage = Math.ceil(ForYou.length / itemsperpage);
+    const prevBtn = document.querySelector(".previous");
+    const nextBtn = document.querySelector(".next");
 
-  pagelist.innerHTML = "";
+    prevBtn.disabled = page <= 1;
+    prevBtn.style.color = page <= 1 ? "grey" : "black";
 
-  product.forEach(items => {
-    pagelist.innerHTML += `
-  <div class="col-6 col-md-4 col-lg-3 mb-3">
-    <div class="product-inside d-flex flex-column shadow-hover border rounded-3 overflow-hidden h-100">
-      <div class="product-image">
-        <img src="images/${items.image}" class="img-fluid" alt="${items.item}" />
-      </div>
-      <div class="product-content d-flex flex-column justify-content-center align-items-start gap-1 p-2">
-        <div class="product-name text-dark fw-semibold">${items.item}</div>
-        <div class="product-price text-danger fw-bold">Rs. ${items.price}</div>
-        <div class="product-rating text-warning">⭐ ${items.rating}</div>
-      </div>
-    </div>
-  </div>
-`;
+    nextBtn.disabled = page >= totalpage;
+    nextBtn.style.color = page >= totalpage ? "grey" : "black";
+  }
+
+  function updateGrid(newClass) {
+    columnClass = newClass;
+    // Rerender current page to apply new columnClass
+    renderProducts();
+  }
+
+  // Layout buttons
+  document.querySelector(".btn1").addEventListener("click", () => updateGrid("col-md-12"));
+  document.querySelector(".btn2").addEventListener("click", () => updateGrid("col-md-6"));
+  document.querySelector(".btn3").addEventListener("click", () => updateGrid("col-md-4"));
+
+  // Pagination: Next
+  document.querySelector(".next").addEventListener("click", () => {
+    const totalpage = Math.ceil(ForYou.length / itemsperpage);
+    if (page < totalpage) {
+      page++;
+      renderProducts();
+    }
   });
 
-  // Re-enable Next button just in case
-  document.querySelector(".next").disabled = false;
-  document.querySelector(".next").style.color = "black";
-});
+  // Pagination: Previous
+  document.querySelector(".previous").addEventListener("click", () => {
+    if (page > 1) {
+      page--;
+      renderProducts();
+    }
+  });
 
-document.querySelector(".previous").addEventListener("click",()=>{
-    if (page <= 1) {
-    document.querySelector(".previous").disabled = true;
-    document.querySelector(".previous").style.color = "grey";
-    return;
-  }
-})
-// For Product
-
-let main_product=document.querySelector(".main-product");
-
-document.querySelector(".btn1").addEventListener("click",()=>{
-
-})
+  // Initial render
+  renderProducts();

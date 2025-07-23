@@ -1,11 +1,15 @@
 .sort{
-  width: 30%;
+  width: 50%;
+  gap: 2%;
+}
+.sortby{
+  width: 100%;
 }
 .catlist{
     border: 1px solid black;
 }
 .sorting{
-  width: 40%;
+  width: 90%;
 }
 .btn {
     display: inline-block;
@@ -25,10 +29,23 @@
     border-radius: 0.3125rem;
     transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out, box-shadow 0.2s ease-in-out;
 }
+.button-group{
+  display: flex;
+  width: 100%;
+}
 .catlist{
     height: 100%;
     display: flex;
     align-items: center;
+}
+.result{
+  text-align: left;
+  border: 1px solid green;
+  width: 50%;
+}
+.product-head{
+  padding: 0;
+  gap: 5%;
 }
 .result1{
     border: 1px solid red;
